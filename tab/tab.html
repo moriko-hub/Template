@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>タブ切り替えメニュー[jQuery]</title>
+  <link rel="stylesheet" type="text/css" href="tab.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script>
+    $(function() {
+    $('.tab li').click(function() {
+        var n = $('.tab li').index(this);
+        $('.tabContent').removeClass('active');
+        $('.tabContent').eq(n).addClass('active');
+        $('.tab li').removeClass('active');
+        $(this).addClass('active')
+    });
+});
+  </script>
+</head>
+
+<body>
+
+<h1>タブ切り替えメニュー[jQuery]</h1>
+
+<div class="tabbox">
+
+<ul class="tab">
+  <li class="active">TAB1</li>
+  <li>TAB2</li>
+  <li>TAB3</li>
+</ul>
+
+<div class="tabContent active">This is the content of TAB 1.</div>
+<div class="tabContent">This is the content of TAB 2.</div>
+<div class="tabContent">This is the content of TAB 3.</div>
+
+</div>
+
+</body>
+</html>
